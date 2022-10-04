@@ -127,4 +127,19 @@
          region: "{{region}}"
          if_exist_do_not_create: true
       register: NATGW_out
-
+    
+    - name: Set Up Private Subnet RouteTable
+      ec2_vpc_route_table:
+        vpc_id: "{{vpcout.vpc.id}}"
+        region: "{{region}}"
+        state: "{{state}}"
+        resource_tags:
+          Name: vprofile-PrivRT
+        subnets:
+          - "{{prisub1_out.subnet.id}}"
+          - "{{prisub2_out.subnet.id}}"
+          - "{{prisub3_out.subnet.id}}"
+        routes: 
+          - dest: 0.0.0.0/0
+            gateway_id: "{{NATGW_out.gateway_id}}"
+      register: privRT_out
