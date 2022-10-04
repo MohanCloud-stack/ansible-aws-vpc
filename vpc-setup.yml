@@ -132,7 +132,6 @@
       ec2_vpc_route_table:
         vpc_id: "{{vpcout.vpc.id}}"
         region: "{{region}}"
-        state: "{{state}}"
         resource_tags:
           Name: vprofile-PrivRT
         subnets:
