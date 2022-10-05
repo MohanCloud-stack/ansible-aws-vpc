@@ -61,12 +61,9 @@
         vpc_subnet_id: "{{pubsub1id}}"
       register: bastionHost_out
     
-    - name: Insert/update "BastionSGid" 
-      ansible.builtin.include_vars:
-              dir: vars
-              files_matching: vpc-output_vars.yaml
+    - name: Insert/update "BastionSGid"
       blockinfile:
-            path: vars/vpc-output_vars
+            path: vars/vpc-output_vars.yaml
             backup: yes
             block: 
              BastionSGid: "{{BastionSG_out.group_id}}"
