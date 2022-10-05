@@ -7,7 +7,7 @@
     - name: Import VPC Variables
       ansible.builtin.include_vars:
               dir: vars
-              files_matching: bastion_setup.yaml
+              files_matching: vpc_setup.yaml
 
     - name: Import VPC setup
       ansible.builtin.include_vars:
