@@ -48,13 +48,11 @@
         image: "{{bastion_ami}}"
         wait: yes
         wait_timeout: 300
-        
         instance_tags:
           Name: "Bastion Host"
           Project: Vprofile
           Owner: Devops Team
         exact-count: 1
-        
         count_tag:
           Name: "Bastion Host"
           Project: Vprofile
