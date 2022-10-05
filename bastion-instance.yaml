@@ -12,7 +12,7 @@
     - name: Import VPC setup
       ansible.builtin.include_vars:
               dir: vars
-              files_matching: output_vars
+              files_matching: output_vars.yaml
 
     - name: Create vprofile ec2 key
       ec2_key:
