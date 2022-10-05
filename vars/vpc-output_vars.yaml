@@ -6,5 +6,5 @@ pubsub3id: 'subnet-0e95c84412cfae669'
 
  
 # BEGIN ANSIBLE MANAGED BLOCK
-{'BastionSGid': 'sg-0d78f4f600e9898a4'}
+BastionSGid: 'sg-0d78f4f600e9898a4'
 # END ANSIBLE MANAGED BLOCK
