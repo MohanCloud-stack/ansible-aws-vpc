@@ -5,4 +5,4 @@
   gather_facts: no
   tasks:
    - name: Import VPC setup variable
-     include_vars: vars/
+     include_vars: vars
