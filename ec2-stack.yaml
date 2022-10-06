@@ -199,7 +199,7 @@
     
   - name: Insert/update "BastionSGid"
     blockinfile:
-      path: provision-stack/group_vars/hostsip
+      path: provision-stack/group_vars/hostsip.yaml
       block: 
         web01_ip: "{{web01_out.tagged_instances[0].private_ip}}"
         app01_ip: "{{app01_out.tagged_instances[0].private_ip}}"
@@ -248,7 +248,7 @@
           rmqsrvgrp
           mcsrvgrp
           dbsrvgrp
-          
+
           [stack_inst:vars]
           ansible_user=ubuntu
           ansible_ssh_private_key_file=loginkey_vpro.pem
